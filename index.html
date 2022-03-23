@@ -1,0 +1,79 @@
+<htmal>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <lable>
+            
+              sonic
+            </lable>
+
+        <div>
+            <input type = "text" id="numeroUno">
+            <input type="text" id="numeroDos">
+
+        </div>
+            <button onclick = "muestraMensaje()">
+            algo
+            </button>
+            <button onclick ="muestraUnaSuma()">
+            Suma
+            </button>
+            
+            <button onclick ="muestraResta()">
+            resta
+            </button>
+
+            <button onclick="muestraMultiplicacion()">
+             multiplicacion
+            </button>
+            
+            </div>
+            
+            
+    </body>
+    <script type="text/javascript">
+        function muestraMensaje(){
+
+alert("texto");
+}
+
+function muestraUnaSuma(){
+var numeroUno = obtenNumeroUno();
+var numeroDos = obtenerNumeroDos();
+var resultado = numeroUno + numeroDos;
+
+alert (resultado);
+
+
+}
+
+function muestraResta(){
+	var numeroUno = 5;
+	var numeroDos= 20;
+	var resultado = numeroUno - numeroDos;
+	alert (resultado);
+
+
+
+}
+
+function muestraMultiplicacion(){
+var numeroUno = 5;
+var numeroDos = 20;
+var resultado = numeroUno * numeroDos;
+alert (resultado);
+}  
+
+function obtenNumeroUno(){
+  var numeroUno=  document.querySelector("#numeroUno").value;
+  return parseInt(numeroUno);
+}
+
+function obtenerNumeroDos(){
+    var numeroDos= document.querySelector("#numeroDos").value;
+    return parseInt(numeroDos);
+}
+</script>
+</htmal>
