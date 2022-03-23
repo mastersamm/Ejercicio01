@@ -28,6 +28,10 @@
             <button onclick="muestraMultiplicacion()">
              multiplicacion
             </button>
+
+            <button onclick="muestraDivision()">
+                Division
+            </button>
             
             </div>
             
@@ -50,8 +54,8 @@ alert (resultado);
 }
 
 function muestraResta(){
-	var numeroUno = 5;
-	var numeroDos= 20;
+	var numeroUno = obtenNumeroUno();
+	var numeroDos= obtenerNumeroDos();
 	var resultado = numeroUno - numeroDos;
 	alert (resultado);
 
@@ -60,15 +64,15 @@ function muestraResta(){
 }
 
 function muestraMultiplicacion(){
-var numeroUno = 5;
-var numeroDos = 20;
+var numeroUno = obtenNumeroUno();
+var numeroDos = obtenerNumeroDos();
 var resultado = numeroUno * numeroDos;
 alert (resultado);
 }  
 
 function muestraDivision(){
-    var numeroUno = 5;
-    var numeroDos = 10;
+    var numeroUno = obtenNumeroUno();
+    var numeroDos = obtenerNumeroDos();
     var resultado = numeroUno / numeroDos;
     alert (resultado);
 
