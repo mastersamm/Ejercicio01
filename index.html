@@ -1,119 +1,213 @@
-<htmal>
-    <head>
+<html lang="es-MX">
 
-    </head>
-    <body>
-        <div>
-            <lable>
-            
-              sonic
-            </lable>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <div>
-            <input type = "text" id="numeroUno">
-            <input type="text" id="numeroDos">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Calculadora</title>
+<style>
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+        
+
+    }
+</style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" id="numeroUno">
+            </div>
+            <div class="col-6">
+                <input type="text" id="numeroDos">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">7</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">8</button>
+
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">9</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">+</button>
+            </div>
 
         </div>
-            <button onclick = "muestraMensaje()">
-            algo
-            </button>
-            <button onclick ="muestraUnaSuma()">
-            Suma
-            </button>
-            
-            <button onclick ="muestraResta()">
-            resta
-            </button>
 
-            <button onclick="muestraMultiplicacion()">
-             multiplicacion
-            </button>
-
-            <button onclick="muestraDivision()">
-                Division
-            </button>
-            
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">4</button>
             </div>
-            
-            
-    </body>
-    <script type="text/javascript">
-        function muestraMensaje(){
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">5</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">6</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">-</button>
+            </div>
+        </div>
 
-alert("texto");
-}
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">1</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">2</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">3</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">x</button>
+            </div>
+        </div>
 
-function muestraUnaSuma(){
-var numeroUno = obtenNumeroUno();
-var numeroDos = obtenerNumeroDos();
-console.log("numeroUno",numeroUno);
-console.log("nuemro dos", numeroDos);
-if ( isNaN(numeroUno)  || isNaN(numeroDos) ){
-    alert ("No seas soquete");
-}
-else{
-    var resultado = numeroUno + numeroDos;
-    alert (resultado);
- }
-}
+        <div class="row">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary">0</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">.</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-primary">=</button>
+            </div>
+        </div>
 
-function muestraResta(){
-	var numeroUno = obtenNumeroUno();
-	var numeroDos= obtenerNumeroDos();
-    if (obtenNumeroUno != null & obtenerNumeroDos != null){
-        alert("no seas soquete");
+
+    </div>
+    <div>
+        <lable>
+
+            sonic
+        </lable>
+
+        <div>
+
+
+
+        </div>
+        <button onclick="muestraMensaje()">
+            algo
+        </button>
+        <button onclick="muestraUnaSuma()">
+            Suma
+        </button>
+
+        <button onclick="muestraResta()">
+            resta
+        </button>
+
+        <button onclick="muestraMultiplicacion()">
+            multiplicacion
+        </button>
+
+        <button onclick="muestraDivision()">
+            Division
+        </button>
+
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function muestraMensaje() {
+
+        alert("texto");
     }
-    else{
-	var resultado = numeroUno - numeroDos;
-	alert (resultado);
- }
 
-
-}
-
-function muestraMultiplicacion(){
-var numeroUno = obtenNumeroUno();
-var numeroDos = obtenerNumeroDos();
-if (numeroUno != null & numeroDos != null){
-    alert("no seas soquete, escribe algo");
-
-}
-else{
-var resultado = numeroUno * numeroDos;
-alert (resultado);
- }
-
-}  
-
-function muestraDivision(){
-    var numeroUno = obtenNumeroUno();
-    var numeroDos = obtenerNumeroDos();
-    if(numeroUno != null & numeroDos != null){
-        alert("no seas soquete, escribe algo");
-
-    }
-    else{
-        if (obtenerNumeroDos ==0)
-        {
-            alert("NO seas tarado, no se puede dividir entre cero");
-            
+    function muestraUnaSuma() {
+        var numeroUno = obtenNumeroUno();
+        var numeroDos = obtenerNumeroDos();
+        console.log("numeroUno", numeroUno);
+        console.log("nuemrodos", numeroDos);
+        if (isNaN(numeroUno) || isNaN(numeroDos)) {
+            alert("No seas soquete");
         }
-        else{
-    var resultado = numeroUno / numeroDos;
-    alert (resultado);
+        else {
+            var resultado = numeroUno + numeroDos;
+            alert(resultado);
         }
     }
-}
+
+    function muestraResta() {
+        var numeroUno = obtenNumeroUno();
+        var numeroDos = obtenerNumeroDos();
+        if (obtenNumeroUno != null & obtenerNumeroDos != null) {
+            alert("no seas soquete");
+        }
+        else {
+            var resultado = numeroUno - numeroDos;
+            alert(resultado);
+        }
 
 
-function obtenNumeroUno(){
-  var numeroUno=  document.querySelector("#numeroUno").value;
-  return parseInt(numeroUno);
-}
+    }
 
-function obtenerNumeroDos(){
-    var numeroDos= document.querySelector("#numeroDos").value;
-    return parseInt(numeroDos);
-}
+    function muestraMultiplicacion() {
+        var numeroUno = obtenNumeroUno();
+        var numeroDos = obtenerNumeroDos();
+        if (numeroUno != null & numeroDos != null) {
+            alert("no seas soquete, escribe algo");
+
+        }
+        else {
+            var resultado = numeroUno * numeroDos;
+            alert(resultado);
+        }
+
+    }
+
+    function muestraDivision() {
+        var numeroUno = obtenNumeroUno();
+        var numeroDos = obtenerNumeroDos();
+        if (numeroUno != null & numeroDos != null) {
+            alert("no seas soquete, escribe algo");
+
+        }
+        else {
+            if (obtenerNumeroDos == 0) {
+                alert("NO seas tarado, no se puede dividir entre cero");
+
+            }
+            else {
+                var resultado = numeroUno / numeroDos;
+                alert(resultado);
+            }
+        }
+    }
+
+
+    function obtenNumeroUno() {
+        var numeroUno = document.querySelector("#numeroUno").value;
+        return parseInt(numeroUno);
+    }
+
+    function obtenerNumeroDos() {
+        var numeroDos = document.querySelector("#numeroDos").value;
+        return parseInt(numeroDos);
+    }
 </script>
 </htmal>
+
+<!--Tarea: agregar input y que el teclado funcione-->
