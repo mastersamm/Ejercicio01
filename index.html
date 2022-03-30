@@ -46,19 +46,27 @@ alert("texto");
 function muestraUnaSuma(){
 var numeroUno = obtenNumeroUno();
 var numeroDos = obtenerNumeroDos();
-var resultado = numeroUno + numeroDos;
-
-alert (resultado);
-
-
+console.log("numeroUno",numeroUno);
+console.log("nuemro dos", numeroDos);
+if ( isNaN(numeroUno)  || isNaN(numeroDos) ){
+    alert ("No seas soquete");
+}
+else{
+    var resultado = numeroUno + numeroDos;
+    alert (resultado);
+ }
 }
 
 function muestraResta(){
 	var numeroUno = obtenNumeroUno();
 	var numeroDos= obtenerNumeroDos();
+    if (obtenNumeroUno != null & obtenerNumeroDos != null){
+        alert("no seas soquete");
+    }
+    else{
 	var resultado = numeroUno - numeroDos;
 	alert (resultado);
-
+ }
 
 
 }
@@ -66,16 +74,35 @@ function muestraResta(){
 function muestraMultiplicacion(){
 var numeroUno = obtenNumeroUno();
 var numeroDos = obtenerNumeroDos();
+if (numeroUno != null & numeroDos != null){
+    alert("no seas soquete, escribe algo");
+
+}
+else{
 var resultado = numeroUno * numeroDos;
 alert (resultado);
+ }
+
 }  
 
 function muestraDivision(){
     var numeroUno = obtenNumeroUno();
     var numeroDos = obtenerNumeroDos();
+    if(numeroUno != null & numeroDos != null){
+        alert("no seas soquete, escribe algo");
+
+    }
+    else{
+        if (obtenerNumeroDos ==0)
+        {
+            alert("NO seas tarado, no se puede dividir entre cero");
+            
+        }
+        else{
     var resultado = numeroUno / numeroDos;
     alert (resultado);
-
+        }
+    }
 }
 
 
